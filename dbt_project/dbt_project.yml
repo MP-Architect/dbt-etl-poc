@@ -1,0 +1,13 @@
+name: etl_poc
+version: "1.0.0"
+profile: etl_poc
+
+model-paths: ["models"]
+test-paths: ["tests"]
+
+models:
+  etl_poc:
+    staging:
+      +materialized: view      # staging = lightweight views
+    marts:
+      +materialized: table     # final output = physical table

@@ -1,0 +1,14 @@
+[project]
+name = "dbt-etl-poc"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "dagster>=1.12.21",
+    "dagster-dbt>=0.28.21",
+    "dagster-webserver>=1.12.21",
+    "dbt-sqlserver>=1.9.0",
+    "pyodbc>=5.1.0",
+    "python-dotenv>=1.2.2",
+]
