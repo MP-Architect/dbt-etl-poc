@@ -18,6 +18,7 @@ uv add dagster dagster-webserver dagster-dbt dbt-sqlserver pyodbc python-dotenv
 `uv run python scripts/setup_db.py`
 `uv run python scripts/simulate_data.py`
 
+# Run DBT
 ```
 cd dbt_project
 uv run dbt debug --profiles-dir .      # verify connection
@@ -27,7 +28,13 @@ uv run dbt docs generate --profiles-dir .  # generate lineage docs
 uv run dbt docs generate --profiles-dir . # serve docs
 ```
 
+# RUN Dagster
 
+```
+cd dbt-etl-poc
+
+uv run dagster dev -m dagster_project
+```
 # Debug Notes
 - Changed localhost → 127.0.0.1 in .env to force IPv4
 - Added Encrypt=no; to the connection string for Docker compatibility
